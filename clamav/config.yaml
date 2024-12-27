@@ -1,0 +1,16 @@
+name: ClamAV
+version: 1.4.1_base
+slug: clamav
+url: https://github.com/amaciuc/hassio-addons/tree/main/clamav
+description: ClamAV antivirus service for Home Assistant
+arch:
+  - amd64
+startup: system
+init: false
+ports:
+  3310/tcp: 3309
+map:
+  - type: data
+    read_only: false
+    path: /var/lib/clamav
+image: docker.io/clamav/clamav

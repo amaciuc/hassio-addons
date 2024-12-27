@@ -1,0 +1,1 @@
+### ClamAV version doc you can view [here](https://docs.clamav.net/appendix/FunctionalityLevels.html)
