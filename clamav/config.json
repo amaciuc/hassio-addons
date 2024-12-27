@@ -1,0 +1,22 @@
+{
+    "name": "ClamAV",
+    "version": "devel",
+    "slug": "clamav",
+    "description": "ClamAV antivirus service for Home Assistant",
+    "arch": ["amd64"],
+    "startup": "services",
+    "boot": "auto",
+    "init": false,
+    "hostname_commented": "core-clamav",
+    "ports": {
+      "3310/tcp": "[external_port]"
+    },
+    "map": ["config", "share"],
+    "options": {
+      "external_port": 3320
+    },
+    "schema": {
+      "external_port": "int(1024:65535)"
+    }
+  }
+  
