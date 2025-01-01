@@ -8,7 +8,7 @@ arch:
 startup: system
 init: false
 ports:
-  3310/tcp: 3309
+  3310/tcp: null
 map:
   - type: data
     read_only: false
