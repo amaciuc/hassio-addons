@@ -1,0 +1,41 @@
+name: Redis Stack
+version: 7.4.0-v1
+slug: redis-stack
+url: https://github.com/amaciuc/hassio-addons/tree/main/redis-stack
+description: >-
+  It contains both Redis Stack server and RedisInsight. 
+  This container is best for local development because you can use RedisInsight to visualize your data.
+arch:
+  - amd64
+  - aarch64
+startup: services
+init: false
+ports:
+  6379/tcp: null
+  8001/tcp: null
+map:
+  - type: data
+    read_only: false
+    path: /data
+# options:
+#   REDIS_ARGS: --save 60 1000 --appendonly yes
+#   REDISTIMESERIES_ARGS: ''
+  # REDISEARCH_ARGS: ''
+  # REDISJSON_ARGS: ''
+  # REDISGRAPH_ARGS: ''
+  # REDISBLOOM_ARGS: ''
+# schema:
+#   REDIS_ARGS: str?
+#   REDISTIMESERIES_ARGS: str?
+  # REDISEARCH_ARGS: str?
+  # REDISJSON_ARGS: str?
+  # REDISGRAPH_ARGS: str?
+  # REDISBLOOM_ARGS: str?
+environment:
+  REDIS_ARGS: --save 60 1000 --appendonly yes
+#   REDISTIMESERIES_ARGS: "[REDISTIMESERIES_ARGS]"
+  # REDISEARCH_ARGS: "[REDISEARCH_ARGS]"
+  # REDISJSON_ARGS: "[REDISJSON_ARGS]"
+  # REDISGRAPH_ARGS: "[REDISGRAPH_ARGS]"
+  # REDISBLOOM_ARGS: "[REDISBLOOM_ARGS]"
+image: docker.io/redis/redis-stack

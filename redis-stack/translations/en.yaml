@@ -1,0 +1,29 @@
+---
+# configuration:
+#   REDIS_ARGS:
+#     name: REDIS_ARGS
+#     description: >-
+#       Env variable with extra arguments for Redis
+#   REDISTIMESERIES_ARGS:
+#     name: REDISTIMESERIES_ARGS
+#     description: >-
+#       Env variable with arguments for RedisTimeSeries
+  # REDISEARCH_ARGS:
+  #   name: REDISEARCH_ARGS
+  #   description: >-
+  #     Env variable with arguments for RediSearch
+  # REDISJSON_ARGS:
+  #   name: REDISJSON_ARGS
+  #   description: >-
+  #     Env variable with arguments for RedisJSON
+  # REDISGRAPH_ARGS:
+  #   name: REDISGRAPH_ARGS
+  #   description: >-
+  #     Env variable with arguments for RedisGraph
+  # REDISBLOOM_ARGS:
+  #   name: REDISBLOOM_ARGS
+  #   description: >-
+  #     Env variable with arguments for RedisBloom
+network:
+  6379/tcp: It exposes Redis Stack server
+  8001/tcp: It exposes RedisInsight 
