@@ -1,0 +1,1 @@
+### Check the ONLYOFFICE Document Server versions on their GitHub project: [link](https://github.com/ONLYOFFICE/DocumentServer?tab=readme-ov-file)

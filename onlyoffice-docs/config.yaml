@@ -1,0 +1,34 @@
+name: ONLYOFFICE Document Server
+version: 8.2
+slug: onlyoffice-docs
+url: https://github.com/amaciuc/hassio-addons/tree/main/onlyoffice-docs
+description: >-
+  ONLYOFFICE Document Server is an online office suite comprising viewers and editors for texts, spreadsheets and presentations, fully compatible with Office Open XML formats: .docx, .xlsx, .pptx and enabling collaborative editing in real time.
+arch:
+  - amd64
+  - aarch64
+startup: services
+init: false
+ports:
+  80/tcp: 8080
+# Followed this doc: https://helpcenter.onlyoffice.com/installation/docs-community-install-docker.aspx
+map:
+  - type: data
+    read_only: false
+    path: /etc/onlyoffice
+  - type: data
+    read_only: false
+    path: /var/log/onlyoffice
+  - type: data
+    read_only: false
+    path: /var/www/onlyoffice/Data
+  - type: data
+    read_only: false
+    path: /var/lib/onlyoffice
+  - type: data
+    read_only: false
+    path: /var/lib/postgresql
+environment:
+  JWT_ENABLED: true
+  JWT_SECRET: a299c86a_jwt_onlyoffice
+image: docker.io/onlyoffice/documentserver
