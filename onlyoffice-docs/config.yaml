@@ -29,6 +29,6 @@ map:
     read_only: false
     path: /var/lib/postgresql
 environment:
-  JWT_ENABLED: true
-  JWT_SECRET: a299c86a_jwt_onlyoffice
+  JWT_ENABLED: "true"
+  JWT_SECRET: "a299c86a_jwt_onlyoffice"
 image: docker.io/onlyoffice/documentserver

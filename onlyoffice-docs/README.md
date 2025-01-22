@@ -4,8 +4,6 @@ This edition is a `community` one. Please check [this](https://github.com/ONLYOF
 
 ### Visit the GitHub [documentation](https://github.com/ONLYOFFICE/DocumentServer?tab=readme-ov-file)
 
-
-
 ## Docker Image
 
 [Here](https://helpcenter.onlyoffice.com/installation/docs-community-install-docker.aspx) is the documentation how to deploy the `onlyoffice-documentserver` as docker container.
