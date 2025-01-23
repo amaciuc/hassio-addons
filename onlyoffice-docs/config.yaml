@@ -10,24 +10,11 @@ arch:
 startup: services
 init: false
 ports:
-  80/tcp: 8080
-# Followed this doc: https://helpcenter.onlyoffice.com/installation/docs-community-install-docker.aspx
+  80/tcp: null
 map:
-  - type: data
+  - type: addon_config
     read_only: false
     path: /etc/onlyoffice
-  - type: data
-    read_only: false
-    path: /var/log/onlyoffice
-  - type: data
-    read_only: false
-    path: /var/www/onlyoffice/Data
-  - type: data
-    read_only: false
-    path: /var/lib/onlyoffice
-  - type: data
-    read_only: false
-    path: /var/lib/postgresql
 environment:
   JWT_ENABLED: "true"
   JWT_SECRET: "a299c86a_jwt_onlyoffice"
